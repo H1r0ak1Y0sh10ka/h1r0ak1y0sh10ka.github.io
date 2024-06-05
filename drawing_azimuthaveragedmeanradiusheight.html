@@ -7,7 +7,7 @@
 <html lang="jp">
     <head>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <title>Hiroaki YOSHIOKA : Abalysis</title>
+        <title>Hiroaki YOSHIOKA : Analysis</title>
         <meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="assets/css/main.css">
     </head>
@@ -29,24 +29,34 @@
             <!-- Section --><section>
                 <div class="inner">
                     <header><h1>Analysis</h1></header>
-                    <h2>Python</h2>
-                    <h3>データセット作成</h3>
+                    <h2>モデルの実験結果で方位角平均した半径高度断面図の描画</h2>
+                    <h3>必要なデータ</h3>
                     <ol>
-                        <li><a href="./dataset_maketrack.html">モデルの実験結果で台風のトラック作成</a></li>
+                        <li>モデルアウトプット（拡張子はnetcdf。例は<a href="./dataset_maketrack.html">モデルの実験結果で台風のトラック作成</a>で作成したもの）</li>
+                        <li>トラックデータ（1と対応していれば何でも良い。例はSCALEのアウトプット）</li>
                     </ol>
-                    <h3>描画</h3>
+                    <h3>出力されるもの</h3>
                     <ol>
-                        <li><a href="./drawing_azimuthaveragedmeanradiusheight.html">モデルの実験結果で方位角平均した半径高度断面図の描画</a></li>
+                        <li>以下の画像ファイルが指定した時間間隔ごと</li>
+                       　<p><img src="./analysis/drawing_azimuthaveragedradiusheight.png" alt="架空の株式会社 Dummy"></p>
                     </ol>
-                    <h4>時系列</h4>
+                    <h3>必要なモジュール</h3>
                     <ol>
+                        <li>numpy</li>
+                        <li>xarray</li>
+                        <li>pandas</li>
+                        <li>itertools</li>
+                        <li>matplotlib</li>
+                        <li>metpy</li>
+                        <li>scipy</li>
                     </ol>
-                    <h4>水平分布</h4>
-                    <h4>鉛直断面</h4>
-                    <h4>ホフメラー図</h4>
-                    <h2>GrADS</h2>
-            </section>ß            
-            
+                    <h3>ソースコード</h3>
+                    <ol>
+                        <script src="https://gist.github.com/H1r0ak1Y0sh10ka/722f8696d9fce618243828db66aeae5b.js"></script>
+                    </ol>
+
+            </section>
+                 
 </div>
 
 <div class="copyright">
